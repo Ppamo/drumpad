@@ -17,6 +17,8 @@ void loop() {
     if (val >= THRESHOLD && playing[i] == 0){
       playing[i] = PLAYING_DELAY;
       digitalWrite(A2D[i], HIGH);
+      Serial.write(i);
+      Serial.write(val);
     }
     if (playing[i] > 0){
       playing[i]--;
